@@ -3,6 +3,7 @@
 *.ko
 *.obj
 *.elf
+*.objdump
 
 # Precompiled Headers
 *.gch
@@ -27,7 +28,18 @@
 *.i*86
 *.x86_64
 *.hex
+*.srec
+*.axf
+*.bin
 
 # Debug files
 *.dSYM/
 *.su
+
+#Special - linker map
+map.txt
+# Special - each user must make their own one of these...
+eth_config.h
+# Special - not host binariess.
+host/listener
+host/talker

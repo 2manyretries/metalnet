@@ -9,7 +9,7 @@ Where appropriate the target interaction is explained below.
 
 Refer to the Beej website and tutorials for more info on these examples.
 https://beej.us/guide/bgnet/
-(BTW: The Beej document states the code 'is completely free of any license restriction.')
+(Note: The Beej document states the code 'is completely free of any license restriction.')
 
 
 "talker" - UDP sender

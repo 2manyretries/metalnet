@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><altera_monitor_program_project version="1.0">
+    <architecture>ARM Cortex-A9</architecture>
+    <system>
+        <sample_system_title>DE0-Nano-SoC Computer for ARM-A9</sample_system_title>
+        <cable>DE-SoC [1-10]</cable>
+        <processor>ARM_A9_HPS_arm_a9_0</processor>
+        <reset_processor_during_load>true</reset_processor_during_load>
+    </system>
+    <program>
+        <type>AXF, ELF or SREC File</type>
+        <source_files>
+            <source_file filepath="true">metalnet.axf</source_file>
+        </source_files>
+    </program>
+</altera_monitor_program_project>

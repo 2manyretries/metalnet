@@ -1,0 +1,61 @@
+Some info on relevant interrupts:
+
+At the ARM:
+147 = EMAC0
+148..151 = EMAC0 ECC
+152 = EMAC1
+153..156 = EMAC1 ECC
+
++0x0038 GMAC: Status
++0x003c GMAC: Int Mask
++0x00db GMAC: *MMI Control/Status
+
++0x1014 DMA: Status
++0x101c DMA: Int Enable
+
+Clear status bit to ack/clear int.
+
+int =
+ (OR)
+ + TTI - Timerstamp Trigger Int
+ + GPI - ???
+ + GMI - GMAC MMC Int (counters?)
+ + GLI - GMAC Line Int
+ + GLPII/GTMSI - LoPowInternet Int
+   ----
+ + (AND)
+   * NIE -                                      Normal Int ENABLE
+   * NIS - Normal Int Status
+     (OR)
+     + (AND)
+       * TIE
+       * TI  - Tx complete
+     + (AND)
+       * ERE
+       * ERI - Early Rx Int - DMA filled 1st data buf of pkt
+     + TUE ? - Tx Buf Unavailable
+     + RIE ? - Rx Int
+   * AIE -                                      Abnormal Int ENABLE
+   * AIS - Abnormal Int Status
+     (OR)
+     + (AND)
+       * TSE
+       * TPS - Tx stopped
+     + (AND)
+       * FBE
+       * FBI - Bus Error
+     + TJE ? - Tx Jabber
+     + OVE ? - Rx Overflow 
+     + UNE ? - Tx Underflow
+     + RUE ? - Rx Buf Unavail
+     + RSE ? - Rx Stop Error
+     + RWE ? - Rx Watchdog Timeout
+
+
+Descriptors:
+Tx:
+  IC = Set TI on complete.
+Rx:
+  DIC = Disable Int on Complete
+
+

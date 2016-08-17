@@ -24,7 +24,7 @@ Prerequisites
 ----
 As a Developer/Builder/Reuser you will need to know basic networking (and relevant Linux commands).
 
-You will need to provision:
+You will need to:
 - Provision MAC address for SoC (they should nominally be globally unique and so I can not tell you one), Perhaps you want to look at the MAC address used by your Linux SW running on the SoC target and reuse that? For more information on MAC addresses Denx offer a page on them: http://www.denx.de/wiki/view/DULG/WhereCanIGetAValidMACAddress
 - Know the MAC address of your Development PC (well in principle we can construct MetalNet programs that deduce this dynamically from ARP and/or Ping etc., but best/useful to know it anyway).
 - Make up IP addresses for SoC and Development PC on the same subnet (apply your settings on the latter).
